@@ -189,7 +189,7 @@ p{
     transition: all 1000ms;
     border: 3px solid rgba(0, 0, 0, .1);
     border-radius: 10px;
-    box-shadow: -1px 5px 20px rgba(0, 0, 0 , 20%);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0 , 15%);
 
 }
 
@@ -197,7 +197,7 @@ p{
     margin: 0 auto;
     width: 55%;
     height: 65%;
-    filter: drop-shadow(-5px 14px 10px rgba(0, 0, 0, .3));
+    filter: drop-shadow(-5px 5px 10px rgba(0, 0, 0, .3));
     object-fit:cover;
 }
 
@@ -280,8 +280,12 @@ p{
     align-items: center;
     border: 3px solid rgba(0, 0, 0, .1);
     border-radius: 10px;
-    box-shadow: -5px 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 4px 4px 60px rgb(0 0 0 / 15%);
     transition: all 500ms;
+}
+
+.content-cards .card:hover{
+    box-shadow: 4px 14px 40px rgb(0 0 0 / 25%);
 }
 
 .content-cards .card img{
@@ -311,10 +315,6 @@ p{
     box-shadow: -3px 3px 10px rgba(0, 0, 0, .3);
 }
 
-.content-cards .card:hover{
-    box-shadow: -5px 25px 10px rgba(0, 0, 0, .2);
-}
-
 .content-cards .card a:hover{
     background-color: #b08afc;
     cursor: pointer;
@@ -339,6 +339,7 @@ p{
 }
 
 .form-contact{
+    margin: 0 20px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -395,7 +396,7 @@ p{
 
 
 .information{
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
 }
@@ -448,6 +449,7 @@ p{
 
 
 .location{
+    margin: 0 30px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -459,7 +461,7 @@ p{
     font-size: 1.2rem;
 }
 
-.location .icon-location{
+/* .location .icon-location{
     margin: 50px;
     padding: 10px;
     width: 120px;
@@ -473,12 +475,12 @@ p{
     border: 0 solid;
     border-radius: 10px;
     cursor: pointer;
-}
+} */
 
-/* .location iframe{
+.location iframe{
     margin-top: 30px;
     border-radius: 10px;
-} */
+}
 
 .copyright{
     width: 100%;
@@ -492,4 +494,26 @@ p{
 .copyright p{
     margin: 10px 50px;
     font-size: .7rem;
+}
+
+
+
+/* Media query 1300px */
+@media screen and (max-width: 1400px){
+    
+    .pictures-togi{
+        margin: 0;
+      flex-direction: column;
+    }
+
+    .about-us img{
+        margin-left: 0;
+        margin-bottom: 40px;
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 1100px){
+    
 }
