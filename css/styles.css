@@ -221,16 +221,18 @@ body{
     margin: 0 auto;
     width: 55%;
     height: 65%;
-    filter: drop-shadow(-5px 5px 10px rgba(0, 0, 0, .3));
-    object-fit:cover;
+    -webkit-filter: drop-shadow(-5px 5px 10px rgba(0, 0, 0, .3));
+            filter: drop-shadow(-5px 5px 10px rgba(0, 0, 0, .3));
+    -o-object-fit:cover;
+       object-fit:cover;
 }
 
-.container-Products .product img:hover{
+/* .container-Products .product img:hover{
     transition: all 1000ms;
     filter: drop-shadow(-5px 20px 6px rgba(0, 0, 0, .3));
     scale: 1.3;
     cursor: pointer;
-}
+} */
 
 .container-Products .product h4{
     margin-top: 40px;
@@ -266,7 +268,8 @@ body{
     padding: 8px;
     width: 12%;
     height: 10%;
-    filter: drop-shadow(-3px 4px 3px rgba(0,0,0,.3));
+    -webkit-filter: drop-shadow(-3px 4px 3px rgba(0,0,0,.3));
+            filter: drop-shadow(-3px 4px 3px rgba(0,0,0,.3));
 }
 
 .brands-container img:nth-child(4){
@@ -359,7 +362,7 @@ body{
 }
 
 #footer-contact .container-footer{
-    height: 500px;
+    height: auto;
     background-color: var(--footerColor);
     color: var(--primaryText);
     overflow: hidden;
@@ -741,6 +744,8 @@ body{
 
     .content-cards .card{
         width: 320px;
+        height: auto;
+        text-align: center;
     }
 
     .content-cards .card img{
@@ -811,10 +816,10 @@ body{
     }
 
     .texts-hero h1{
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
     .texts-hero p{
-        font-size: .8rem;
+        font-size: .75rem;
     }
 
     .texts-hero a{
@@ -822,7 +827,27 @@ body{
         text-align: center;
     }
 
+
+
    
+    /* Our services */
+
+    .content-cards .card{
+        width: 320px;
+        height: auto;
+        text-align: center;
+    }
+
+    .content-cards .card h4{
+        font-size: .9rem;
+    }
+
+    .content-cards .card p{
+        font-size: .8rem;
+    }
+
+
+
 
     /* Footer */
     .contact-us{
