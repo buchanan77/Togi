@@ -504,7 +504,7 @@ body{
     border-radius: 10px;
 }
 
-.form-contact .contact-us button{
+.form-contact .contact-us form button{
     margin: 30px 0;
     width: 90%;
     height: 50px;
@@ -515,7 +515,7 @@ body{
     border-radius: 10px;
 }
 
-.form-contact .contact-us button:hover{
+.form-contact .contact-us form button:hover{
     background-color: var(--hoverColor);
     cursor: pointer;
 }
