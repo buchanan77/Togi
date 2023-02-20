@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#774ab5e6">
+    <meta name="language" content="spanish">
+    <!-- <meta name="audience" content="all">
+    <meta name="copyright" content="Togi.SA">
+    <meta name="author" content="Buchanan Jonathan">
+    <meta name="description" content="Togi es una empresa de alfajores, chocolates y bombones, ubicada en la ciudad de Florencio Varela">
+    <meta name="keywords" content="togi, alfajor, alfajores, chocolate, chocolates, dulce, bombon, bombones, golosina, golosinas">
+    <meta name="robots" content="index, all, follow">
+    <meta name="category" content="alfajores, dulces, golosinas"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Togi</title>
     <link rel="shortcut icon" href="/assets/togiLogoBarra.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="./js/modal.js" defer></script>
 </head>
 
 
@@ -37,6 +46,7 @@
 
 
 
+   <main>
 
      <section class="container about-us">
 
@@ -63,52 +73,100 @@
      <section class="info-products">
         <div class="container">
             <h3 class="big-title">Nuestros productos</h3>
-            <div class="container-Products">
+            <div class="container-products">
 
                 <div class="product">
                     <img src="/assets/alfajor1.png" alt="imagen de un alfajor">
-                    <h4>Alfajor triple mousse</h4>
+                    <div class="product_container-texts">
+                        <h4>Alfajor triple mousse</h4>
+                        <button class="btn-product" data-product="Alfajor triple mousse">+ info</button>
+                    </div>
+                    
                 </div>
 
                 <div class="product">
                     <img src="/assets/alfajor2.png" alt="imagen de un alfajor">
-                    <h4>Alfajor glaseado</h4>
+                    <div class="product_container-texts">
+                        <h4>Alfajor glaseado</h4>
+                        <button class="btn-product" data-product="Alfajor glaseado">+ info</button>
+                    </div>
+                    
                 </div>
 
                 <div class="product">
                     <img src="/assets/alfajor3.png" alt="imagen de un alfajor">
-                    <h4>Alfajor triple dulce de leche</h4>
+                    <div class="product_container-texts">
+                        <h4>Alfajor triple dulce de leche</h4>
+                        <button class="btn-product" data-product="Alfajor triple dulce de leche">+ info</button>
+                    </div>
+                    
                 </div>
 
                 <div class="product">
                     <img src="/assets/chocolate1.png" alt="imagen de un chocolate">
-                    <h4>Chocolate con almendras</h4>
+                    <div class="product_container-texts">
+                        <h4>Chocolate con almendras</h4>
+                        <button class="btn-product" data-product="Chocolate con almendras">+ info</button>
+                    </div>
+                    
                 </div>
 
                 <div class="product">
                     <img src="/assets/chocolate2.png" alt="imagen de un chocolate">
-                    <h4>Chocolate con mani</h4>
+                    <div class="product_container-texts">
+                        <h4>Chocolate con mani</h4>
+                        <button class="btn-product" data-product="Chocolate con mani">+ info</button>
+                    </div>
+                    
                 </div>
 
                 <div class="product">
                     <img src="/assets/chocolate3.png" alt="imagen de un chocolate">
-                    <h4>Chocolate Semiamargo</h4>
+                    <div class="product_container-texts">
+                        <h4>Chocolate Semiamargo</h4>
+                        <button class="btn-product" data-product="Chocolate Semiamargo">+ info</button>
+                    </div>
+                    
                 </div>
 
                 <div class="product">
                     <img src="/assets/bombones1.png" alt="imagen de una caja de bombones">
-                    <h4>Bombones Seitu con dulce de leche</h4>
+                    <div class="product_container-texts">
+                        <h4>Bombones Seitu con dulce de leche</h4>
+                        <button class="btn-product" data-product="Bombones Seitu con dulce de leche">+ info</button>
+                    </div>
+                    
                 </div>
 
                 <div class="product">
                     <img src="/assets/bombones2.png" alt="imagen de una caja de bombones">
-                    <h4>Bombones Seitu Semiamargo</h4>
+                    <div class="product_container-texts">
+                        <h4>Bombones Seitu Semiamargo</h4>
+                        <button class="btn-product" data-product="Bombones Seitu Semiamargo">+ info</button>
+                    </div>
+                   
                 </div>
 
     
             </div>
         </div>
+
+        <button class="btn-scrolltop"></button>
+
      </section>
+
+
+
+     <div class="modal-container">
+        <div class="modal">
+            <button class="btn-close">X</button>
+            <img src="/assets/alfajor1.png" alt="imagen de un alfajor">
+            <div class="modal-texts">
+                <h4>Alfajor triple mousse</h4>
+                <p>Alfajor Milka Mousse: Les traemos un riquísimo alfajor de la marca Milka, con un baño de chocolate con leche con el sabor que caracteriza a estos chocolates. El relleno de este producto es un suave mousse dándole un toque especial a dicho alfajor.</p>
+            </div>
+        </div>
+     </div>
 
 
 
@@ -145,21 +203,21 @@
                 <img src="/assets/help-desk.png" alt="">
                 <h3>Titulo card</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                <a href="" class="cta">Saber mas</a>
+                <a href="" class="cta">+ info</a>
             </article>
 
             <article class="card">
                 <img src="/assets/box.png" alt="">
                 <h3>Titulo card</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                <a href="" class="cta">Saber mas</a>
+                <a href="" class="cta">+ info</a>
             </article>
 
             <article class="card">
                 <img src="/assets/tools.png" alt="">
                 <h3>Titulo card</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                <a href="" class="cta">Saber mas</a>
+                <a href="" class="cta">+ info</a>
             </article>
             
         </div>
@@ -170,7 +228,7 @@
 
      </section>
 
-
+    </main>
      
 
      <footer id="footer-contact">
@@ -315,5 +373,7 @@
 </script>
 
 
+
 </body>
+
 </html>
