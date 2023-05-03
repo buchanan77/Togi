@@ -1,7 +1,7 @@
-let template = document.querySelector('.modal-container');
-let containerProduct = document.querySelector('.container-products');
-let modal = document.querySelector('.modal');
-let fragment = document.createDocumentFragment();
+const modalContainer = document.querySelector('.modal-container');
+const containerProduct = document.querySelector('.container-products');
+const modal = document.querySelector('.modal');
+const fragment = document.createDocumentFragment();
 let btnScrolltop = document.querySelector('.btn-scrolltop');
 
 
@@ -37,16 +37,18 @@ document.addEventListener('click', (e)=>{
 
         if(e.target.matches('.btn-product')){
 
-            modal.classList.remove('modal-close');
+
+            modalContainer.classList.remove('modal-close');
             
         
             setTimeout(()=>{
                 modal.style.opacity = '1';
-                template.style.visibility = 'visible';
+                modalContainer.style.visibility = 'visible';
             },900);
 
-            console.log(e.bubbles)
-        
+            createProduct(e);
+
+            
         };
 
 
@@ -56,7 +58,7 @@ document.addEventListener('click', (e)=>{
         
             setTimeout(()=>{
                 modal.style.opacity = '0';
-                template.style.visibility = 'hidden';
+                modalContainer.style.visibility = 'hidden';
             },900);
         };
     
@@ -74,6 +76,42 @@ window.onscroll = ()=>{
 
 
 
+const listProducts = {}
+
+
+const createProduct = (e)=>{
+    const product = {
+        img: e.target.dataset.img,
+        title: e.target.dataset.product,
+        description: e.target.dataset.description
+    }
+    console.log(product)
+
+    listProducts[product.title] = product;
+
+}
+
+
+const showModal = (e)=>{
+    Object.values(listProducts).forEach(item => {
+    
+        const clone = modal.cloneNode(true);
+        clone.document.querySelector('.modal img').src = item.img;
+        clone.document.querySelector('.modal .modal-texts .title').textContent = item.title;
+        clone.document.querySelector('.modal .description').textContent = item.description;
+
+        fragment.appendChild(clone);
+        console.log("ShowModal esta funcionando")
+
+    });
+
+    createModal.appendChild(fragment);
+
+}
+
+console.log(listProducts)
+
+
 
 
 
@@ -86,7 +124,7 @@ window.onscroll = ()=>{
     
 //         setTimeout(()=>{
 //             modal.style.opacity = '1';
-//             template.style.visibility = 'visible';
+//             modalContainer.style.visibility = 'visible';
 //         },900);
     
 //     }
@@ -99,7 +137,7 @@ window.onscroll = ()=>{
     
 //         setTimeout(()=>{
 //             modal.style.opacity = '0';
-//             template.style.visibility = 'hidden';
+//             modalContainer.style.visibility = 'hidden';
 //         },900);
 //     };
 
